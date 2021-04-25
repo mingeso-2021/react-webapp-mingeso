@@ -25,7 +25,7 @@ class Addition extends React.Component{
     handleSubmit = e => {
         e.preventDefault();
         console.log(process.env);
-        axios.post(this.baseUrl + "/adder/sum", {
+        axios.post(this.baseUrl + "/calculate/sum", {
             number1 : this.state.number1,             
             number2 : this.state.number2
         })
