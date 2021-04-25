@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
 import axios from 'axios';
+import '../assets/ccs/Addition.css'
+
 
 class Addition extends React.Component{
 
@@ -39,12 +41,14 @@ class Addition extends React.Component{
 
     render(){
         return (
-            <div id="sumComponent" onSubmit={ this.handleSubmit }>
+            <div id="sumComponent rounded-pill" onSubmit={ this.handleSubmit }>
                 <form id="sumOperans" method="post">
+                <input className="reslt text-center" type="text" id="result" placeholder="Resultado" defaultValue={this.state.result} disabled></input>
                     <input type="text" id="number1" placeholder="Número 1" onChange={this.setNumber1}></input>
                     <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
-                    <input type="text" id="result" placeholder="Resultado" defaultValue={this.state.result} disabled></input>
-                    <input type="submit" id="result" value="Sumar"></input>
+                    
+                    <input  className = "btn " type="submit" id="result" value="Sumar"></input>
+                    <input  className = "btn" type="submit" id="result" value="Restar"></input>
                 </form>
             </div>
         );

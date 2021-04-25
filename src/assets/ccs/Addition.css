@@ -1,0 +1,36 @@
+.sumOperans{
+    padding: 40px 20px;
+    border-radius: 2px;
+    border: none;
+ 
+}
+
+#number1{
+    padding: 8px 20px;
+    color:black;
+}
+#sumOperans{
+    width: 200px;
+    
+    color:white;
+    margin-bottom: 40px;
+
+}
+#number2{
+    padding: 8px 20px;
+    color:black;
+}
+
+.reslt{
+    width: 150px;
+    height: 100px;
+    padding: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:transparent;
+    
+}
+.btn{
+    padding: 8px 20px;
+    background-color:slategray;
+}
