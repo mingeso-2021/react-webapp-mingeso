@@ -13,33 +13,34 @@ class Addition extends React.Component{
     }
 
     setNumber1 = e =>{
-        const { value1 } = e.target
+        const { value } = e.target
         this.setState({ 
-            number1 : value1
+            number1 : value
         })
     }
     setNumber2 = e =>{
-        const { value2 } = e.target
+        const { value } = e.target
         this.setState({ 
-            number2 : value2
+            number2 : value
         })
     }
 
     handleSubmit = e => {
         e.preventDefault();
         axios
-            .post(this.baseUrl + "/adder/sum", this.state)
+            .post(this.baseUrl + "/adder/sum", {number1 : this.state.number1,
+                                                number2 : this.state.number2})
             .then((response)=>{
-                this.setState({result: response.data})
+                this.setState({result: response.data.result})
                 console.log(response.data)
             })
-            .catch((err => console.log("cuaujjsh")));
+            .catch((err => console.log(err)));
     };
 
     render(){
         return (
             <div id="sumComponent" onSubmit={this.handleSubmit}>
-                <form id="sumOperans" method="get">
+                <form id="sumOperans" method="post">
                     <input type="text" id="number1" placeholder="Número 1" onChange={this.setNumber1}></input>
                     <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
                     <input type="text" id="result" placeholder="Resultado" defaultValue={this.state.result} disabled></input>
