@@ -3,8 +3,6 @@ import axios from 'axios';
 
 class Addition extends React.Component{
 
-    baseUrl = process.env.BASEURL;
-
     constructor(){
         super();
         this.baseUrl = process.env.REACT_APP_BASE_URL;
