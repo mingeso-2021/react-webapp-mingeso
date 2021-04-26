@@ -41,15 +41,23 @@ class Addition extends React.Component{
 
     render(){
         return (
-            <div id="sumComponent rounded-pill" onSubmit={ this.handleSubmit }>
-                <form id="sumOperans" method="post">
-                <input className="reslt text-center" type="text" id="result" placeholder="Resultado" defaultValue={this.state.result} disabled></input>
-                    <input type="text" id="number1" placeholder="Número 1" onChange={this.setNumber1}></input>
-                    <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
-                    
-                    <input  className = "btn " type="submit" id="result" value="Sumar"></input>
-                    <input  className = "btn" type="submit" id="result" value="Restar"></input>
-                </form>
+            <div id="sumComponent rounded-pill" className= "add-hr" >
+                    <form className = "wraper text-center"id="sumOperans" method="post"onSubmit={ this.handleSubmit } >
+
+                        <input className="reslt text-center" type="text" id="result" placeholder="Resultado" defaultValue={this.state.result} disabled></input>      
+                        
+                    <div class="row ">
+                        <div class="col-sm">
+                            <input type="text" id="number1" placeholder="Número 1" onChange={this.setNumber1}></input>
+                            <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
+                        </div>
+                        <div class="col-sm ">
+                            <input  className = "btn " type="submit" id="result" value="Sumar"></input>
+                            <input  className = "btn " type="submit" id="result" value="Restar"></input>
+                        </div>
+                    </div>
+                        
+                    </form>
             </div>
         );
     }
