@@ -26,7 +26,6 @@ class Addition extends React.Component{
 
     handleSubmit = e => {
         e.preventDefault();
-        console.log(process.env);
         axios.post(this.baseUrl + "/calculate/sum", {
             number1 : this.state.number1,             
             number2 : this.state.number2
@@ -38,6 +37,22 @@ class Addition extends React.Component{
         })
         .catch( err => console.log(err) );
     };
+
+
+    handleAlternate = e => {
+        e.preventDefault();
+        axios.post(this.baseUrl + "/calculate/subtraction", {
+            number1 : this.state.number1,             
+            number2 : this.state.number2
+        })
+        .then( response => {
+            this.setState({
+                result: response.data.result
+            });
+        })
+        .catch( err => console.log(err) );
+    };
+
 
     render(){
         return (
@@ -51,9 +66,9 @@ class Addition extends React.Component{
                             <input type="text" id="number1" placeholder="Número 1" onChange={this.setNumber1}></input>
                             <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
                         </div>
-                        <div class="col-sm ">
-                            <input  className = "btn " type="submit" id="result" value="Sumar"></input>
-                            <input  className = "btn " type="submit" id="result" value="Restar"></input>
+                        <div class="col-sm">
+                            <button class="btn" type="submit"> Sumar </button>
+                            <button class="btn" nClick = {this.handleAlternate.bind(this)}> Restar </button>
                         </div>
                     </div>
                         
