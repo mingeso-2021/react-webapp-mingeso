@@ -68,7 +68,7 @@ class Addition extends React.Component{
                         </div>
                         <div class="col-sm">
                             <button class="btn" type="submit"> Sumar </button>
-                            <button class="btn" nClick = {this.handleAlternate.bind(this)}> Restar </button>
+                            <button class="btn" onClick = {this.handleAlternate.bind(this)}> Restar </button>
                         </div>
                     </div>
                         
