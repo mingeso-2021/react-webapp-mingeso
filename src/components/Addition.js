@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../assets/ccs/Addition.css'
+import '../assets/css/Addition.css'
 
 
 class Addition extends React.Component{
