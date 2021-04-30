@@ -16,6 +16,7 @@ class Addition extends React.Component{
     }
 
     setNumber1 = e =>{
+        console.log("si");
         const { value } = e.target
         this.setState({ number1 : value })
     }
