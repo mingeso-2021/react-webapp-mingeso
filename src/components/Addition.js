@@ -16,6 +16,7 @@ class Addition extends React.Component{
     }
 
     setNumber1 = e =>{
+        console.log("si");
         const { value } = e.target
         this.setState({ number1 : value })
     }
@@ -67,8 +68,8 @@ class Addition extends React.Component{
                             <input type="text" id="number2" placeholder="Número 2" onChange={this.setNumber2}></input>
                         </div>
                         <div class="col-sm">
-                            <button class="btn" type="submit"> Sumar </button>
-                            <button class="btn" onClick = {this.handleAlternate.bind(this)}> Restar </button>
+                            <button className="btn" type="submit"> Sumar </button>
+                            <button className="btn" onClick = {this.handleAlternate.bind(this)}> Restar </button>
                         </div>
                     </div>
                         
